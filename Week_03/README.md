@@ -48,6 +48,20 @@ private void backtrace(State state, Data data) {
 }
 ```
 
+# 牛顿迭代法
+```c++
+int mysqrt(int x){
+	double tmpx = x;
+	double k = 1.0;
+	double k0 = 0.0;
+	while(abs(k0-k) >= 1){
+		k0 = k;
+		k = (k + tmpx/k)/2;
+	}
+	return (int)k;
+}
+```
+
 ## 体会：五毒神掌YYDS!
 
 ## 无法直观理解回溯 -> 五毒10+题 -> 自然回溯思考
