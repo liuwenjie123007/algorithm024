@@ -53,7 +53,7 @@
     - 旋转数组及其子区间会存在三种情况
 
       ```java
-       	int mid = left + (right - left) / 2;
+        int mid = left + (right - left) / 2;
         if (nums[mid] >= nums[left]) {
           left = mid + 1;
         } else {
@@ -65,7 +65,7 @@
   - 完整代码
 
     ```java
-    		public static int findDeviceIndex(int[] nums) {
+        public static int findDeviceIndex(int[] nums) {
             int left = 0;
             int right = nums.length - 1;
             while (left <= right) {
@@ -85,7 +85,7 @@
   - 测试用例
 
     ```java
-    		public static void main(String[] args) {
+        public static void main(String[] args) {
             int[] nums1 = {4, 5, 6, 7, 0, 1, 2};
             int deviceIndex = findDeviceIndex(nums1);
             System.out.println(deviceIndex);
@@ -113,7 +113,7 @@
 ## DFS代码模板
 
 ```java
-		public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> allResults = new ArrayList<>();
         if (root == null) {
             return allResults;
@@ -139,7 +139,7 @@
 ## BFS代码模板
 
 ```java
-		public class TreeNode {
+    public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
