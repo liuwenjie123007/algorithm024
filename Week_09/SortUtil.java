@@ -1,18 +1,12 @@
-# 学习笔记
+package Week_09;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.stream.Stream;
 
+public class SortUtil {
 
-## 排序算法
-
-
-
-### 基础排序
-
-
-
-#### 冒泡排序
-
-```java
     /**
      * 冒泡排序
      * 时间复杂度: O(n^2)
@@ -45,13 +39,7 @@
         array[i] = array[j];
         array[j] = temp;
     }
-```
 
-
-
-#### 简单选择排序
-
-```java
     /**
      * 简单选择排序
      * 时间复杂度: O(n^2)
@@ -73,13 +61,7 @@
             swap(array, i, minIndex);
         }
     }
-```
 
-
-
-#### 简单插入排序
-
-```java
     /**
      * 简单插入排序
      * 时间复杂度: O(n^2)
@@ -101,13 +83,7 @@
             array[preIndex + 1] = cur;
         }
     }
-```
 
-
-
-#### 希尔排序
-
-```java
     /**
      * 希尔排序
      * 时间复杂度O(n^1.3)
@@ -131,17 +107,7 @@
             }
         }
     }
-```
 
-
-
-### 高级排序
-
-
-
-#### 归并排序
-
-```java
     /**
      * 归并排序
      * 时间复杂度O(NLogN)
@@ -172,17 +138,11 @@
         while (j <= right) temp[k++] = array[j++];
         if (temp.length >= 0) System.arraycopy(temp, 0, array, left, temp.length);
     }
-```
 
-
-
-#### 快速排序
-
-```java
     /**
      * 快速排序
      * 时间复杂度O(NLogN)
-     * 空间复杂度O(LogN)
+     * 空间复杂度O(NLogN)
      *
      * @param array
      * @param comparator
@@ -210,13 +170,7 @@
         swap(array, end, counter);
         return counter;
     }
-```
 
-
-
-#### 堆排序
-
-```java
     /**
      * 堆排序
      * 时间复杂度O(NLogN)
@@ -232,7 +186,4 @@
         for (int i = 0; i < array.length; i++)
             array[i] = pq.poll();
     }
-```
-
-
-
+}
